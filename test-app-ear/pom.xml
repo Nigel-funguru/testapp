@@ -79,7 +79,7 @@
                         <jarModule>
                             <groupId>com.testapp</groupId>
                             <artifactId>wildfly-service-module</artifactId>
-                            <includeInApplicationXml>true</includeInApplicationXml>
+                            <!--<includeInApplicationXml>true</includeInApplicationXml>-->
                         </jarModule>
                         <webModule>
                             <groupId>com.testapp</groupId>

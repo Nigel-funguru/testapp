@@ -26,43 +26,11 @@
             <version>1.0</version>
             <type>war</type>
         </dependency>
-        <!-- SERVICE DEPENDENCIES -->
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>${spring.springframework.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-orm</artifactId>
-            <version>${spring.springframework.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-aspects</artifactId>
-            <version>${spring.springframework.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <version>4.1.8.Final</version>
-        </dependency>
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>1.7.1</version>
-        </dependency>
-
-        <!-- WEB DEPENDENCIES -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>${spring.springframework.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>jstl</groupId>
-            <artifactId>jstl</artifactId>
-            <version>1.2</version>
+            <groupId>com.testapp</groupId>
+            <artifactId>wildfly-war-module2</artifactId>
+            <version>1.0</version>
+            <type>war</type>
         </dependency>
     </dependencies>
 
@@ -73,17 +41,20 @@
                 <artifactId>maven-ear-plugin</artifactId>
                 <version>2.9.1</version>
                 <configuration>
-                    <defaultLibBundleDir>lib/</defaultLibBundleDir>
-                    <skinnyWars>true</skinnyWars>
                     <modules>
                         <jarModule>
                             <groupId>com.testapp</groupId>
                             <artifactId>wildfly-service-module</artifactId>
-                            <!--<includeInApplicationXml>true</includeInApplicationXml>-->
+                            <includeInApplicationXml>true</includeInApplicationXml>
                         </jarModule>
                         <webModule>
                             <groupId>com.testapp</groupId>
                             <artifactId>wildfly-war-module</artifactId>
+                            <contextRoot>/</contextRoot>
+                        </webModule>
+                        <webModule>
+                            <groupId>com.testapp</groupId>
+                            <artifactId>wildfly-war-module2</artifactId>
                             <contextRoot>/</contextRoot>
                         </webModule>
                     </modules>

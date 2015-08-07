@@ -64,3 +64,4 @@ buildNumber.properties
 test-app-war/target
 test-app-service/target
 test-app-ear/target
+test-app-war2/target

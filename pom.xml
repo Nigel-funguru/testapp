@@ -16,6 +16,7 @@
     <modules>
         <module>test-app-service</module>
         <module>test-app-war</module>
+        <module>test-app-war2</module>
         <module>test-app-ear</module>
     </modules>
 

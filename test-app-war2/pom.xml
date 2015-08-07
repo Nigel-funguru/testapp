@@ -10,7 +10,7 @@
         <version>1.0</version>
     </parent>
 
-    <artifactId>wildfly-war-module</artifactId>
+    <artifactId>wildfly-war-module2</artifactId>
     <packaging>war</packaging>
 
     <dependencies>

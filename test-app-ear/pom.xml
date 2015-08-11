@@ -32,6 +32,92 @@
             <version>1.0</version>
             <type>war</type>
         </dependency>
+
+        <!-- Service Layer Dependencies -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${spring.springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>${spring.springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>4.1.8.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.7.1</version>
+        </dependency>
+
+        <!-- WAR1 Dependencies -->
+        <dependency>
+            <groupId>com.testapp</groupId>
+            <artifactId>wildfly-service-module</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+        </dependency>
+
+        <!-- WAR2 Dependencies -->
+        <dependency>
+            <groupId>com.testapp</groupId>
+            <artifactId>wildfly-service-module</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -41,11 +127,16 @@
                 <artifactId>maven-ear-plugin</artifactId>
                 <version>2.9.1</version>
                 <configuration>
+                    <defaultLibBundleDir>lib/</defaultLibBundleDir>
+                    <skinnyWars>true</skinnyWars>
+                    <archive>
+                        <manifestFile>src/main/application/MANIFEST.MF</manifestFile>
+                    </archive>
                     <modules>
                         <jarModule>
                             <groupId>com.testapp</groupId>
                             <artifactId>wildfly-service-module</artifactId>
-                            <includeInApplicationXml>true</includeInApplicationXml>
+                            <!--<includeInApplicationXml>true</includeInApplicationXml>-->
                         </jarModule>
                         <webModule>
                             <groupId>com.testapp</groupId>

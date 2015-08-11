@@ -18,31 +18,31 @@
             <groupId>com.testapp</groupId>
             <artifactId>wildfly-service-module</artifactId>
             <version>1.0</version>
-            <!--<scope>provided</scope>-->
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
             <version>${spring.springframework.version}</version>
-            <!--<scope>provided</scope>-->
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>jstl</groupId>
             <artifactId>jstl</artifactId>
             <version>1.2</version>
-            <!--<scope>provided</scope>-->
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>javax.servlet.jsp</groupId>
             <artifactId>jsp-api</artifactId>
             <version>2.0</version>
-            <!--<scope>provided</scope>-->
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
             <version>2.5</version>
-            <!--<scope>provided</scope>-->
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
